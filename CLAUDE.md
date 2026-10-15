@@ -57,4 +57,4 @@ Presentational, domain-agnostic sortable/paginated table used by orders, invento
 - Styling is Tailwind v4 utility classes inline in JSX (`app/globals.css` defines the theme via `@theme`/`@import "tailwindcss"` — no separate `tailwind.config.js`). No CSS modules or styled-components.
 - Path alias `@/*` maps to the repo root (see `tsconfig.json`), e.g. `@/store/hooks`, `@/lib/api`.
 - Client components are explicitly marked `'use client'`; pages default to server components unless they need hooks/Redux, in which case the interactive part is usually split into a separate `*Form.tsx`/component.
-- Orders are polled every 15s (`setInterval` in `OrdersPage`), matching the old app's polling behavior.
+- Orders are polled every 15s on both the orders and dashboard pages, via the shared `ORDERS_POLL_INTERVAL_MS` in `lib/constants.ts` — change it there, not per page.
