@@ -20,6 +20,7 @@ import { StockConfirmationModal } from './StockConfirmationModal';
 import { toOrderRow } from './adapters';
 import { STOCK_STATUS_BADGE, STOCK_STATUS_LABEL_KEY } from './stockStatus';
 import type { FilterValue, OrderRow, OrderStatus } from './types';
+import { ORDERS_POLL_INTERVAL_MS } from '@/lib/constants';
 
 const ROW_TINT: Record<OrderStatus, string> = {
   pending: 'bg-muted hover:bg-accent/80',
@@ -77,7 +78,7 @@ export default function OrdersPage() {
 
   useEffect(() => {
     dispatch(fetchOrders(range));
-    const interval = setInterval(() => dispatch(fetchOrders(range)), 5000);
+    const interval = setInterval(() => dispatch(fetchOrders(range)), ORDERS_POLL_INTERVAL_MS);
     return () => clearInterval(interval);
   }, [dispatch, range]);
 

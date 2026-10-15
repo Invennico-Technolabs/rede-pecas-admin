@@ -12,6 +12,7 @@ import { StatsGrid } from './StatsGrid';
 import { RevenueChart } from './RevenueChart';
 import { OrdersChart } from './OrdersChart';
 import { PeriodFilter } from './PeriodFilter';
+import { ORDERS_POLL_INTERVAL_MS } from '@/lib/constants';
 
 /**
  * Dashboard home page: loads orders, products, customers and analytics on
@@ -34,7 +35,7 @@ export default function DashboardPage() {
     const interval = setInterval(() => {
       dispatch(fetchOrders('all'));
       dispatch(fetchOrderStats());
-    }, 15000);
+    }, ORDERS_POLL_INTERVAL_MS);
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
