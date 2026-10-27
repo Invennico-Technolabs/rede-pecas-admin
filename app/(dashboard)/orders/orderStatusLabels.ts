@@ -1,7 +1,9 @@
 const STATUS_KEY_MAP: Record<string, string> = {
   awaiting_payment: 'awaitingPayment',
   awaiting_stock_confirmation: 'awaitingStockConfirmation',
+  awaiting_customer_details: 'awaitingCustomerDetails',
   stock_unavailable: 'stockUnavailable',
+  awaiting_alternative_resolution: 'awaitingAlternativeResolution',
   awaiting_payment_method: 'awaitingPaymentMethod',
   awaiting_bank_subtype: 'awaitingBankSubtype',
   awaiting_in_person_subtype: 'awaitingInPersonSubtype',

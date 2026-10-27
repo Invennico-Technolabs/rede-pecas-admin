@@ -87,7 +87,9 @@ export const pt: Dictionary = {
     rawStatus: {
       awaitingPayment: 'A Aguardar Configuração de Pagamento',
       awaitingStockConfirmation: 'A Aguardar Confirmação de Stock',
+      awaitingCustomerDetails: 'A Aguardar Dados do Cliente',
       stockUnavailable: 'Stock Indisponível',
+      awaitingAlternativeResolution: 'A Aguardar Alternativa do Cliente',
       awaitingPaymentMethod: 'A Aguardar Método de Pagamento',
       awaitingBankSubtype: 'A Aguardar Dados Bancários',
       awaitingInPersonSubtype: 'A Aguardar Dados Presenciais',
