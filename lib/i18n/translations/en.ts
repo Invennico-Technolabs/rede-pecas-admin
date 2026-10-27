@@ -85,7 +85,9 @@ export const en = {
     rawStatus: {
       awaitingPayment: 'Awaiting Payment Setup',
       awaitingStockConfirmation: 'Awaiting Stock Confirmation',
+      awaitingCustomerDetails: 'Awaiting Customer Details',
       stockUnavailable: 'Stock Unavailable',
+      awaitingAlternativeResolution: 'Awaiting Customer Alternative',
       awaitingPaymentMethod: 'Awaiting Payment Method',
       awaitingBankSubtype: 'Awaiting Bank Details',
       awaitingInPersonSubtype: 'Awaiting In-Person Details',
